@@ -1,0 +1,128 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/24/2023  19:17:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL5\C51\BIN\BL51.EXE .\Objects\main'.obj TO .\Objects\project PRINT (.\Listings\project.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main'.obj (MAIN_)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN_)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?MAIN_
+            DATA    0012H     0002H     UNIT         _DATA_GROUP_
+            IDATA   0014H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     006DH     UNIT         ?PR?_QWE?MAIN_
+            CODE    00FCH     0020H     UNIT         ?PR?MAIN?MAIN_
+            CODE    011CH     0019H     UNIT         ?PR?_MS?MAIN_
+            CODE    0135H     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MAIN_)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN_
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN_                 -----    -----
+  +--> ?PR?_QWE?MAIN_
+
+?PR?_QWE?MAIN_                 -----    -----
+  +--> ?PR?_MS?MAIN_
+
+?PR?_MS?MAIN_                  0012H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN_)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2023  19:17:36  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        MAIN_
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  B:00A0H.4       PUBLIC        P2_4
+  C:00FCH         PUBLIC        main
+  C:008FH         PUBLIC        _qwe
+  D:0008H         PUBLIC        ASD
+  C:011CH         PUBLIC        _ms
+  -------         PROC          _MS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0012H         SYMBOL        i
+  D:0013H         SYMBOL        j
+  -------         ENDDO         
+  C:011CH         LINE#         3
+  C:011CH         LINE#         4
+  C:011CH         LINE#         5
+  C:0126H         LINE#         7
+  C:0129H         LINE#         8
+  C:012CH         LINE#         10
+  C:012CH         LINE#         11
+  C:012FH         LINE#         12
+  C:0132H         LINE#         13
+  C:0134H         LINE#         14
+  -------         ENDPROC       _MS
+  -------         PROC          _QWE
+  D:0007H         SYMBOL        q
+  D:0004H         SYMBOL        w
+  C:008FH         LINE#         15
+  C:008FH         LINE#         16
+  C:00BCH         LINE#         17
+  C:00C0H         LINE#         18
+  C:00C4H         LINE#         19
+  C:00C8H         LINE#         20
+  C:00CCH         LINE#         21
+  C:00D4H         LINE#         22
+  C:00DCH         LINE#         23
+  C:00E4H         LINE#         24
+  C:00EAH         LINE#         25
+  C:00EAH         LINE#         26
+  C:00F1H         LINE#         27
+  C:00F8H         LINE#         28
+  C:00FBH         LINE#         29
+  -------         ENDPROC       _QWE
+  -------         PROC          MAIN
+  C:00FCH         LINE#         30
+  C:00FCH         LINE#         32
+  C:00FCH         LINE#         33
+  C:0105H         LINE#         34
+  C:010CH         LINE#         35
+  C:0113H         LINE#         36
+  C:011AH         LINE#         37
+  -------         ENDPROC       MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/24/2023  19:17:36  PAGE 3
+
+
+  -------         ENDMOD        MAIN_
+
+Program Size: data=21.0 xdata=0 code=322
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
